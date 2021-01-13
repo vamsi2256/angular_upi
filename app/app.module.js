@@ -1,2 +1,2 @@
 'use strict';
-angular.module('upiApp',['ngRoute','registerComponent','loginComponent']);
+angular.module('upiApp',['ngRoute','registerComponent','loginComponent','dashboardComponent']);

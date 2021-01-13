@@ -11,6 +11,9 @@ angular.
         when('/register', {
           template: '<register-component></register-component>'
         }).
+        when('/dashboard',{
+          template:'<dashboard-component></dashboard-component>'
+        }).
         otherwise('/');
     }
   ]);
