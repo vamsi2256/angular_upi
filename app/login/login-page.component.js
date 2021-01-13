@@ -2,7 +2,7 @@
 
 angular.module('upiApp',[]);
 
-angular.module('upiApp').component('loginComponent',{
+angular.module('upiApp').component('loginPage',{
     templateUrl: "login/login.html",
     controller: [function AppController(){
         var self = this;
