@@ -1,4 +1,4 @@
-var app=angular.module('upiApp',[]);
+var app=angular.module('registerComponent',[]);
 
 app.component('registerComponent',{
     templateUrl:"register/register.html",

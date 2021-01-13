@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('upiApp',[]);
+angular.module('loginComponent',[]);
 
-angular.module('upiApp').component('loginComponent',{
+angular.module('loginComponent').component('loginComponent',{
     templateUrl: "login/login.html",
     controller: [function AppController(){
         var self = this;

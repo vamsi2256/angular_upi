@@ -6,11 +6,16 @@
     <title>Document</title>
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route/angular-route.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
     <script src="login/login.js"></script>
     <script src="register/register.js"></script>
+   
 </head>
 <body>
-    <!-- <login-component></login-component> -->
-    <register-component></register-component>
+    <!-- <login-component></login-component>
+    <register-component></register-component> -->
+    <div ng-view></div>
 </body>
 </html>
