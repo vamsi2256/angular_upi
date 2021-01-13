@@ -1,0 +1,23 @@
+{
+  "name": "angular_upi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ./app -a localhost -p 8085 -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vamsi2256/angular_upi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vamsi2256/angular_upi/issues"
+  },
+  "homepage": "https://github.com/vamsi2256/angular_upi#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
