@@ -1,7 +1,24 @@
 <div>
-    <ul ng-repeat="trans in $ctrl.trans_array">
+    <ul class="list-group" ng-repeat="trans in $ctrl.items">
         <li >{{trans.amount}}</li>
-        <li>{{trans.sender.name}}</li>
-        <li>{{trans.receiver.name}}</li>
+        <li >{{trans.sender.name}}</li>
+        <li >{{trans.receiver.name}}</li>
+    </ul>
+    <ul ng-if="$ctrl.pager.pages.length" class="pagination">
+        <li ng-class="{disabled:$ctrl.pager.currentPage === 1}" class="page-item">
+            <a class="page-link" ng-click="$ctrl.setPage(1)">First</a>
+        </li>
+        <li ng-class="{disabled:$ctrl.pager.currentPage === 1}" class="page-item">
+            <a class="page-link" ng-click="$ctrl.setPage($ctrl.pager.currentPage - 1)">Previous</a>
+        </li>
+        <li class="page-item" ng-repeat="page in $ctrl.pager.pages" ng-class="{active:$ctrl.pager.currentPage === page}">
+            <a class="page-link" ng-click="$ctrl.setPage(page)">{{page}}</a>
+        </li>                
+        <li class="page-item" ng-class="{disabled:$ctrl.pager.currentPage === $ctrl.pager.totalPages}">
+            <a class="page-link" ng-click="$ctrl.setPage($ctrl.pager.currentPage + 1)">Next</a>
+        </li>
+        <li class="page-item" ng-class="{disabled:$ctrl.pager.currentPage === $ctrl.pager.totalPages}">
+            <a class="page-link" ng-click="$ctrl.setPage($ctrl.pager.totalPages)">Last</a>
+        </li>
     </ul>
 </div>
