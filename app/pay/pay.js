@@ -17,7 +17,7 @@ angular.module('payComponent').component('payComponent',{
                 console.log(obj.rnumber+"   "+obj1)
                 if(obj1.name!=="no user"){
                     console.log(obj1.name)
-                    $location.path("/amount/").search({obj:obj})
+                    $location.path("/amount/"+JSON.stringify(obj))
                 }
             })
         }
