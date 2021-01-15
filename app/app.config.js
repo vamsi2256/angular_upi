@@ -14,6 +14,9 @@ angular.
         when('/dashboard',{
           template:'<dashboard-component></dashboard-component>'
         }).
+        when('/amount/:obj',{
+          template:'<amount-component></amount-component>'
+        }).
         otherwise('/');
     }
   ]);

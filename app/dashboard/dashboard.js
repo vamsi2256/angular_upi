@@ -1,4 +1,4 @@
-angular.module('dashboardComponent',['balanceComponent','transactionComponent'])
+angular.module('dashboardComponent',['balanceComponent','transactionComponent','payComponent'])
 
 angular.module('dashboardComponent').component('dashboardComponent',{
     templateUrl:"dashboard/dashboard.html",
