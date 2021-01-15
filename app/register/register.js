@@ -2,13 +2,16 @@ var app=angular.module('registerComponent',[]);
 
 app.component('registerComponent',{
     templateUrl:"register/register.html",
-    controller:function registerController($http){
+    controller:function registerController($location,$http){
         var self=this;
         self.name=""
         self.email=""
         self.city=""
         self.mobile_number=""
         self.pwd=""
+        self.cancel=()=>{
+            $location.path("/")
+        }
         self.register=()=>{
             $http.post("http://localhost:3001/Register",{
                 name:self.name,
@@ -19,7 +22,7 @@ app.component('registerComponent',{
             }).then((response)=>{
                 if (response.data==='data Inserted'){
                      self.msg = "Data Submitted Successfully!";
-                    //  $loction.path("")
+                    $loction.path("/")
                      console.log("sucess")}
                 else{
                     self.msg = "Service not Exists";

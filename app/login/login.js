@@ -17,6 +17,7 @@ angular.module('loginComponent').component('loginComponent',{
                     password:self.pwd
                 }).then((response)=>{
                     if (response.data==='user present'){
+                        localStorage.setItem("mobile",JSON.stringify(self.mobile_number))
                         $location.path("/dashboard")
                     }
                     else{
