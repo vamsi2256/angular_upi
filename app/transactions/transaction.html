@@ -1,9 +1,9 @@
 <div>
-    <ul class="list-group" ng-repeat="trans in $ctrl.items">
-        <li >{{trans.amount}}</li>
-        <li >{{trans.sender.name}}</li>
-        <li >{{trans.receiver.name}}</li>
-    </ul>
+    <dl class="border border-primary list-group mt-3 w-75 ml-5"  ng-repeat="trans in $ctrl.items">
+        <dt class="ml-3">Rs:{{trans.amount}}</dt>
+        <dt class="ml-3">Sender:{{trans.sender.name}}</dt>
+        <dt class="ml-3">Receiver:{{trans.receiver.name}}</dt>
+    </dl>
     <ul ng-if="$ctrl.pager.pages.length" class="pagination">
         <li ng-class="{disabled:$ctrl.pager.currentPage === 1}" class="page-item">
             <a class="page-link" ng-click="$ctrl.setPage(1)">First</a>

@@ -9,7 +9,7 @@ angular.module('balanceComponent').component('balanceComponent',{
         $http.post("http://localhost:3001/checkBalance",{mobileNumber:mobile}).then((response)=>{
             let obj=response.data
             self.balance=obj.balance
-            localStorage.setItem("balance",JSON.stringify(self.balance))
+            // localStorage.setItem("balance",JSON.stringify(self.balance))
             self.name=obj.name
         }).catch((err)=>{
             self.msg="something went wrong"

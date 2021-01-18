@@ -18,12 +18,17 @@ angular.module('loginComponent').component('loginComponent',{
                 }).then((response)=>{
                     if (response.data==='user present'){
                         localStorage.setItem("mobile",JSON.stringify(self.mobile_number))
-                        $location.path("/dashboard")
+                        $http.post("http://localhost:3001/checkBalance",{mobileNumber:self.mobile_number}).then((response)=>{
+                        let obj=response.data
+                        self.balance=obj.balance
+                        localStorage.setItem("balance",JSON.stringify(self.balance))
+                            }).then(()=> $location.path("/dashboard"))
                     }
                     else{
                         $location.path("/register")
                         }
                 });
+                
         }
     }
 })
